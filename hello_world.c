@@ -442,9 +442,7 @@ int main() {
 						break;
 					}
 				}
-				//get next random alien and random time
-				randNum = (rand() % 8) + 1;
-				alienshootcount = randNum * 700;
+				//next alien bullet to fire will be 1
 				numalienbul = 1;
 			} else if (numalienbul == 1) {
 				for (m = 5; m > 0; m--) {
@@ -457,8 +455,7 @@ int main() {
 						break;
 					}
 				}
-				randNum = (rand() % 8) + 1;
-				alienshootcount = randNum * 700;
+				//next alien bullet to fire will be 2
 				numalienbul = 2;
 			} else if (numalienbul == 2) {
 				for (m = 5; m > 0; m--) {
@@ -471,10 +468,12 @@ int main() {
 						break;
 					}
 				}
-				randNum = (rand() % 8) + 1;
-				alienshootcount = randNum * 700;
+				//next alien bullet to fire will be 0
 				numalienbul = 0;
 			}
+			//get next random alien and random time
+			randNum = (rand() % 8) + 1;
+			alienshootcount = randNum * 700;
 		}
 
 		if (delayalienshot > DELAY_A_SHOOT) {
